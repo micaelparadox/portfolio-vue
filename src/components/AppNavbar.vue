@@ -4,19 +4,19 @@
             <nav class="flex items-center">
                 <ul v-if="!isMobileMenuOpen" class="nav-links hidden lg:flex items-center space-x-8">
                     <li>
-                        <a class="nav-link" :class="{ 'text-white font-bold': $route.path === '/' }"
+                        <a class="nav-link" :class="{ 'text-white font': $route.path === '/' }"
                             @click="scrollTo('inicio')">Início</a>
                     </li>
                     <li>
-                        <a class="nav-link" :class="{ 'text-white font-bold': $route.path === '/experience' }"
+                        <a class="nav-link" :class="{ 'text-white font': $route.path === '/experience' }"
                             @click="scrollTo('experience')">Experiências</a>
                     </li>
                     <li>
-                        <a class="nav-link" :class="{ 'text-white font-bold': $route.path === '/about' }"
+                        <a class="nav-link" :class="{ 'text-white font': $route.path === '/about' }"
                             @click="scrollTo('about')">Sobre</a>
                     </li>
                     <li>
-                        <a class="nav-link" :class="{ 'text-white font-bold': $route.path === '/contact' }"
+                        <a class="nav-link" :class="{ 'text-white font': $route.path === '/contact' }"
                             @click="scrollTo('contact')">Contato</a>
                     </li>
                 </ul>
@@ -28,19 +28,19 @@
                 <ul v-if="isMobileMenuOpen"
                     class="nav-links-mobile absolute top-0 right-0 w-full mt-16 bg-gray-800 text-white">
                     <li @click="toggleMobileMenu">
-                        <a class="nav-link" :class="{ 'text-white font-bold': $route.path === '/' }"
+                        <a class="nav-link" :class="{ 'text-white font': $route.path === '/' }"
                             @click="scrollTo('inicio')">Início</a>
                     </li>
                     <li @click="toggleMobileMenu">
-                        <a class="nav-link" :class="{ 'text-white font-bold': $route.path === '/experience' }"
+                        <a class="nav-link" :class="{ 'text-white font': $route.path === '/experience' }"
                             @click="scrollTo('experience')">Experiências</a>
                     </li>
                     <li @click="toggleMobileMenu">
-                        <a class="nav-link" :class="{ 'text-white font-bold': $route.path === '/about' }"
+                        <a class="nav-link" :class="{ 'text-white font': $route.path === '/about' }"
                             @click="scrollTo('about')">Sobre</a>
                     </li>
                     <li @click="toggleMobileMenu">
-                        <a class="nav-link" :class="{ 'text-white font-bold': $route.path === '/contact' }"
+                        <a class="nav-link" :class="{ 'text-white font': $route.path === '/contact' }"
                             @click="scrollTo('contact')">Contato</a>
                     </li>
                 </ul>
@@ -155,4 +155,5 @@ button {
     .nav-links-mobile {
         display: none;
     }
-}</style>
+}
+</style>

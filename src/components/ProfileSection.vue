@@ -1,6 +1,7 @@
 <template>
     <div id="inicio" class="app-container bg-gray-900 text-white pb-20 mb-20 border-b border-gray-700 profile-container">
-        <img src="@/assets/69440479.png" alt="Foto de perfil" class="w-48 h-48 rounded-full object-cover my-10 mx-auto" />
+        <img src="@/assets/credibilidade.jpeg" alt="Foto de perfil"
+            class="w-48 h-48 rounded-full object-cover my-10 mx-auto" />
         <div class="text-center">
             <h2 class="text-3xl font-bold mb-2">{{ pageTitle }}</h2>
             <p class="text-lg mb-4">
