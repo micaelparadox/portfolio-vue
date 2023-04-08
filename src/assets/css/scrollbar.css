@@ -1,0 +1,25 @@
+/* Personalizando a barra de rolagem para navegadores WebKit */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(145deg, #2c3e50, #212f3d);
+    border-radius: 6px;
+    box-shadow: 0 0 12px 4px rgba(33, 47, 61, 0.8);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(145deg, #1b2430, #17202a);
+}
+
+/* Personalizando a barra de rolagem para o Firefox */
+html {
+    scrollbar-width: thin;
+    scrollbar-color: #212f3d #f1f1f1;
+}

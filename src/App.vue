@@ -1,10 +1,11 @@
 <template>
   <div class="container">
-    <profile-section></profile-section>
-    <experience-section></experience-section>
-    <work-slider></work-slider>
-    <about-section></about-section>
-    <contact-section></contact-section>
+    <AppNavbar />
+    <ProfileSection />
+    <ExperienceSection />
+    <WorkSlider />
+    <AboutSection />
+    <ContactSection />
   </div>
 </template>
 
@@ -14,6 +15,7 @@ import ExperienceSection from './components/ExperienceSection.vue';
 import WorkSlider from './components/WorkSlider.vue';
 import AboutSection from './components/AboutSection.vue';
 import ContactSection from './components/ContactSection.vue';
+import AppNavbar from './components/AppNavbar.vue';
 
 export default {
   components: {
@@ -21,7 +23,8 @@ export default {
     ExperienceSection,
     WorkSlider,
     AboutSection,
-    ContactSection
+    ContactSection,
+    AppNavbar,
   }
 };
 </script>

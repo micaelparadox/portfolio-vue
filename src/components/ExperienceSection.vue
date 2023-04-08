@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-gray-100 dark:bg-gray-800 py-16">
+    <div id="experience" class="bg-gray-100 dark:bg-gray-800 py-16">
         <h3 class="text-3xl font-bold mb-8 text-center text-gray-800 dark:text-white">Experiências &#x1F44D;</h3>
 
         <div class="app-container max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

@@ -1,5 +1,5 @@
 <template>
-    <section class="app-container my-8 mx-auto">
+    <section id="about" class="app-container my-8 mx-auto">
         <h3 class="text-lg font-semibold mb-4">Sobre 👨‍💻</h3>
         <div class="about-paragraph">
             <p>

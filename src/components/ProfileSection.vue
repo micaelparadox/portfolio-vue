@@ -1,8 +1,8 @@
 <template>
-    <div class="app-container bg-gray-900 text-white pb-20 mb-20 border-b border-gray-700 profile-container">
+    <div id="inicio" class="app-container bg-gray-900 text-white pb-20 mb-20 border-b border-gray-700 profile-container">
         <img src="@/assets/69440479.png" alt="Foto de perfil" class="w-48 h-48 rounded-full object-cover my-10 mx-auto" />
         <div class="text-center">
-            <h2 class="text-3xl font-bold mb-2">Micael Santana</h2>
+            <h2 class="text-3xl font-bold mb-2">{{ pageTitle }}</h2>
             <p class="text-lg mb-4">
                 <span class="font-bold">Software Engineer</span>
                 ⚡️ Java | JavaScript | TypeScript | Angular | Node.js | NestJS | Python | Django | Spring Boot | PHP |
@@ -11,17 +11,25 @@
         </div>
     </div>
 </template>
-
-
+  
+<script>
+export default {
+    computed: {
+        pageTitle() {
+            return 'Micael Santana'
+        }
+    },
+    mounted() {
+        document.title = this.pageTitle
+    }
+}
+</script>
   
 <style scoped>
 /* Aumentando a margem superior na classe .profile-container */
 .profile-container {
-    margin-top: 8rem;
-}
-
-.bg-gray-900 {
-    background-color: #1f2937;
+    background-color: #212f3d;
+    padding-top: 80px;
 }
 
 .rounded-full {
@@ -70,4 +78,3 @@
     max-width: 1280px;
 }
 </style>
-  
