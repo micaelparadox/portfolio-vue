@@ -109,10 +109,31 @@ export default defineComponent({
 .nav-link {
     color: #fff;
     text-decoration: none;
+    position: relative;
+    padding: 0.25rem 0.5rem;
+    overflow: hidden;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(0);
+    transition: transform 0.3s ease-in-out;
+    z-index: -1;
+    border-radius: 5px;
+}
+
+.nav-link:hover::after {
+    transform: scale(1);
 }
 
 .nav-link:hover {
-    color: #4a5568;
+    color: #ffffff;
 }
 
 .nav-links-mobile {

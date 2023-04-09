@@ -131,5 +131,16 @@ export default {
     .swiper-slide {
         padding: 0.5rem;
     }
+
+    .work-slider h4 {
+        font-size: 1.2rem;
+        margin-top: 1rem;
+    }
+
+    .work-slider p {
+        font-size: 0.8rem;
+        margin-top: 0.4rem;
+        line-height: 1.2;
+    }
 }
 </style>
