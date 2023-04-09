@@ -112,6 +112,7 @@ export default defineComponent({
     position: relative;
     padding: 0.25rem 0.5rem;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .nav-link::after {
