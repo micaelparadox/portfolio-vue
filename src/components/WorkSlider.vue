@@ -92,7 +92,6 @@ export default {
     border-radius: 10px;
 }
 
-
 .slide-image {
     width: 100%;
     height: 100%;
@@ -107,14 +106,14 @@ export default {
 
 /* Estilos para os novos trabalhos */
 .work-slider h4 {
-    font-size: 1.5rem;
-    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    margin-top: 1rem;
 }
 
 .work-slider p {
-    font-size: 0.9rem;
-    margin-top: 0.5rem;
-    line-height: 1.4;
+    font-size: 0.8rem;
+    margin-top: 0.4rem;
+    line-height: 1.2;
 }
 
 .work-slider .swiper-slide:nth-child(odd) {
@@ -135,13 +134,13 @@ export default {
     }
 
     .work-slider h4 {
-        font-size: 1.2rem;
-        margin-top: 1rem;
+        font-size: 1rem;
+        margin-top: 0.5rem;
     }
 
     .work-slider p {
-        font-size: 0.8rem;
-        margin-top: 0.4rem;
+        font-size: 0.7rem;
+        margin-top: 0.3rem;
         line-height: 1.2;
     }
 }

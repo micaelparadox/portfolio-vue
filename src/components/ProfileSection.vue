@@ -3,16 +3,20 @@
         <img src="@/assets/credibilidade.jpeg" alt="Foto de perfil"
             class="w-48 h-48 rounded-full object-cover my-10 mx-auto" />
         <div class="text-center">
-            <h2 class="text-3xl font-bold mb-2">{{ pageTitle }}</h2>
-            <p class="text-lg mb-4">
-                <span class="font-bold">Software Engineer</span>
-                ⚡️ Java | JavaScript | TypeScript | Angular | Node.js | NestJS | Python | Django | Spring Boot | PHP |
-                Laravel | Docker | Kubernetes | Expertise em Backend & Soluções Robustas 🎯
-            </p>
+            <div class="mb-8">
+                <h2 class="text-3xl font-bold mb-4">{{ pageTitle }}</h2>
+            </div>
+            <div class="mb-8">
+                <p class="text-lg mb-8">
+                    <span class="font-bold">Software Engineer</span>
+                    ⚡️ Java | JavaScript | TypeScript | Angular | Node.js | NestJS | Python | Django | Spring Boot | PHP |
+                    Laravel | Docker | Kubernetes | Expertise em Backend & Soluções Robustas 🎯
+                </p>
+            </div>
         </div>
     </div>
 </template>
-  
+
 <script>
 export default {
     computed: {
@@ -25,7 +29,7 @@ export default {
     }
 }
 </script>
-  
+
 <style scoped>
 /* Aumentando a margem superior na classe .profile-container */
 .profile-container {
@@ -80,6 +84,7 @@ export default {
 @media (min-width: 768px) {
     .text-lg {
         font-size: 1.25rem;
+        margin-bottom: 1rem;
     }
 
     .text-3xl {
@@ -92,12 +97,12 @@ export default {
     }
 }
 
-.mb-2 {
-    margin-bottom: 0.5rem;
+.mb-8 {
+    margin-bottom: 2rem;
 }
 
-.mb-4 {
-    margin-bottom: 1rem;
+.mb-2 {
+    margin-bottom: 0.5rem;
 }
 
 .mx-auto {
