@@ -104,11 +104,24 @@ export default {
     }
 }
 
+@media (min-width: 768px) {
+    .experiences {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (min-width: 1024px) {
     .experiences {
+        grid-template-columns: repeat(3, 1fr);
         max-width: 1024px;
         margin-left: auto;
         margin-right: auto;
+    }
+}
+
+@media (min-width: 1200px) {
+    .experiences {
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 </style>

@@ -82,14 +82,16 @@ export default {
 }
 
 .swiper-slide {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: 1fr auto auto;
+    gap: 1rem;
     align-items: center;
-    justify-content: center;
+    justify-items: center;
     text-align: center;
     padding: 1rem;
     border-radius: 10px;
 }
+
 
 .slide-image {
     width: 100%;

@@ -27,12 +27,12 @@
     background-color: #1f2937;
 }
 
-.container {
+/* .container {
     max-width: 1280px;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-}
+} */
 
 .px-6 {
     padding-left: 1.5rem;

@@ -1,64 +1,62 @@
-/* global.css */
-
 /* Defina uma largura máxima para a aplicação */
-.app-container {
-    max-width: 1280px;
+/* .app-container {
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
-}
+} */
 
 /* Estilos para smartphones (largura máxima de 575px) */
 @media (max-width: 575px) {
     .app-container {
-        padding-left: 1rem;
-        padding-right: 1rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
     }
 }
 
 /* Estilos para tablets (largura máxima de 767px) */
 @media (max-width: 767px) and (min-width: 576px) {
     .app-container {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
     }
 }
 
 /* Estilos para desktops pequenos (largura máxima de 991px) */
 @media (max-width: 991px) and (min-width: 768px) {
     .app-container {
-        padding-left: 2rem;
-        padding-right: 2rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 }
 
 /* Estilos para desktops médios (largura máxima de 1199px) */
 @media (max-width: 1199px) and (min-width: 992px) {
     .app-container {
-        padding-left: 2.5rem;
-        padding-right: 2.5rem;
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
     }
 }
 
 /* Estilos para desktops grandes (largura mínima de 1200px e máxima de 1599px) */
 @media (min-width: 1200px) and (max-width: 1599px) {
     .app-container {
-        padding-left: 3rem;
-        padding-right: 3rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
     }
 }
 
 /* Estilos para telas enormes (largura mínima de 1600px e máxima de 1919px) */
 @media (min-width: 1600px) and (max-width: 1919px) {
     .app-container {
-        padding-left: 4rem;
-        padding-right: 4rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
 }
 
 /* Estilos para telas ultra-enormes (largura mínima de 1920px) */
 @media (min-width: 1920px) {
     .app-container {
-        padding-left: 5rem;
-        padding-right: 5rem;
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
     }
 }

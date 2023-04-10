@@ -29,9 +29,10 @@ export default {
 <style scoped>
 /* Aumentando a margem superior na classe .profile-container */
 .profile-container {
-    background-color: #212f3d;
+    background-color: #1F2937;
     padding-top: 80px;
 }
+
 
 .rounded-full {
     border-radius: 9999px;
@@ -45,6 +46,7 @@ export default {
     color: #fff;
 }
 
+/* Estilos padrão */
 .text-lg {
     font-size: 1.125rem;
 }
@@ -53,13 +55,41 @@ export default {
     font-size: 2.25rem;
 }
 
-.font-bold {
-    font-weight: 700;
-}
-
 .my-10 {
     margin-top: 2.5rem;
     margin-bottom: 2.5rem;
+}
+
+/* Estilos para tablets (largura máxima de 767px) */
+@media (max-width: 767px) {
+    .text-lg {
+        font-size: 1rem;
+    }
+
+    .text-3xl {
+        font-size: 2rem;
+    }
+
+    .my-10 {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+}
+
+/* Estilos para desktops (largura mínima de 768px) */
+@media (min-width: 768px) {
+    .text-lg {
+        font-size: 1.25rem;
+    }
+
+    .text-3xl {
+        font-size: 2.5rem;
+    }
+
+    .my-10 {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
 }
 
 .mb-2 {

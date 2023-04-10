@@ -1,5 +1,5 @@
 <template>
-    <section id="about" class="app-container my-8 mx-auto">
+    <section id="about" class="app-container about-container my-8 mx-auto">
         <h3 class="text-lg font-semibold mb-4">Sobre 👨‍💻</h3>
         <div class="about-paragraph">
             <p>
@@ -29,12 +29,20 @@
 </template>
 
 <style scoped>
-.app-container {
+/* .app-container {
     max-width: 640px;
+} */
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .about-paragraph {
     margin-bottom: 1rem;
+    text-align: center;
+    max-width: 640px;
 }
 
 .text-lg {

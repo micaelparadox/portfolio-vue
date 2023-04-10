@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="">
     <AppNavbar />
     <ProfileSection />
     <ExperienceSection />
@@ -8,6 +8,7 @@
     <ContactSection />
   </div>
 </template>
+
 
 <script>
 import ProfileSection from './components/ProfileSection.vue';
