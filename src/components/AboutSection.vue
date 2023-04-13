@@ -3,8 +3,10 @@
         <h3 class="text-lg font-semibold mb-4">Sobre 👨‍💻</h3>
         <div class="about-paragraph">
             <p>
-                Olá, meu nome é Micael Santana e sou um entusiasta da tecnologia com sete anos de experiência como
-                engenheiro de software na indústria de Tecnologia da Informação. Meu trabalho consiste em tornar ideias em
+                Olá, meu nome é <strong>Micael Santana</strong> e sou um entusiasta da tecnologia com sete anos de
+                experiência como
+                engenheiro de software na indústria de Tecnologia da Informação. Meu trabalho consiste em tornar
+                ideias em
                 realidade, criando soluções personalizadas e inovadoras que atendam às necessidades dos meus clientes e
                 ultrapassem suas expectativas.
             </p>
@@ -48,10 +50,11 @@
 .text-lg {
     font-size: 1.5rem;
     line-height: 2rem;
-    font-weight: 600;
+    font-weight: bold;
+    /* Changed from 600 to bold */
     color: #2d3748;
-    /* verde */
 }
+
 
 .text-sm {
     font-size: 0.875rem;
