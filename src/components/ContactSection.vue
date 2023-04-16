@@ -8,14 +8,40 @@
                 <p class="mt-4 text-gray-600 dark:text-gray-400 text-lg leading-relaxed">
                     Entre em contato comigo para colaborações, oportunidades ou qualquer outra coisa que você queira falar.
                 </p>
-                <a href="https://api.whatsapp.com/send?phone=5547996428339"
+                <button @click="sendMessageOnWhatsApp"
                     class="inline-block px-6 py-4 mt-8 font-medium text-white transition duration-500 ease-in-out transform bg-green-500 rounded-md hover:bg-green-600 focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2">
                     Enviar mensagem no WhatsApp
-                </a>
+                </button>
             </div>
         </div>
     </section>
 </template>
+
+<script>
+export default {
+    methods: {
+        sendMessageOnWhatsApp() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(async (position) => {
+                    const lat = position.coords.latitude;
+                    const lon = position.coords.longitude;
+                    const currentTime = new Date().toLocaleString();
+                    const googleMapsUrl = `https://www.google.com/maps?q=${lat},${lon}`;
+                    const message = `Olá! Gostaria de conversar sobre uma colaboração. Minha localização atual é: ${googleMapsUrl}. A data e hora atual são: ${currentTime}.`;
+                    const encodedMessage = encodeURIComponent(message);
+                    const phoneNumber = '5547996428339';
+                    const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
+
+                    window.open(whatsappUrl, '_blank');
+                });
+            } else {
+                alert('Geolocalização não é suportada neste navegador.');
+            }
+        },
+    },
+};
+</script>
+
   
 <style scoped>
 /* Aqui usamos classes do Tailwind CSS para estilizar o componente */
