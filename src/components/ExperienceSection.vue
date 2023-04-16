@@ -5,10 +5,10 @@
         <div class="app-container max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div v-for="experience in experiences" :key="experience.id"
                 class="experience bg-gray-900 border border-gray-700 rounded-lg p-6 relative cursor-pointer transform transition duration-300 hover:shadow-lg hover:-translate-y-1">
-                <div class="company-info flex items-center mb-4">
+                <div class="company-info flex flex-col md:flex-row items-center mb-4">
                     <img :src="experience.logo" :alt="experience.company + ' Logo'"
-                        class="company-logo w-12 h-12 object-cover mr-4" />
-                    <h5 class="text-lg font-bold">{{ experience.company }}</h5>
+                        class="company-logo w-12 h-12 object-cover mb-2 md:mb-0 md:mr-4" />
+                    <h5 class="text-lg font-bold text-center md:text-left">{{ experience.company }}</h5>
                 </div>
                 <p class="position-title font-bold text-xl mb-2">{{ experience.position }}</p>
                 <p class="duration text-gray-400 text-sm mb-2">{{ experience.duration }}</p>
@@ -18,6 +18,7 @@
         </div>
     </div>
 </template>
+
 <script>
 export default {
     name: "ExperienceSection",

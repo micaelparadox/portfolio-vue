@@ -1,6 +1,6 @@
 <template>
     <div class="work-slider">
-        <h3 class="text-3xl font-bold mb-8 text-center text-gray-800 dark:text-white">Trabalhos como Freelancer 🚀</h3>
+        <h3 class="work-title text-3xl font-bold mb-8 text-center">Trabalhos como Freelancer 🚀</h3>
         <swiper :slides-per-view="3" :space-between="30" :pagination="{ clickable: true }" :navigation="true"
             :autoplay="{ delay: 3000 }" ref="mySwiper">
             <swiper-slide v-for="(work, index) in works" :key="index">
@@ -11,6 +11,7 @@
         </swiper>
     </div>
 </template>
+
 <script>
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/swiper-bundle.css';
@@ -76,6 +77,11 @@ export default {
     padding: 1rem;
 }
 
+/* Adicione esta classe para corrigir a cor do título */
+.work-title {
+    color: #2C2C2C;
+}
+
 .swiper {
     width: 100%;
     margin: 0 auto;
@@ -124,9 +130,26 @@ export default {
     background-color: #ffffff;
 }
 
+/* Atualize o estilo para responsividade */
+@media screen and (max-width: 1200px) {
+    swiper {
+        --swiper-navigation-size: 16px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    swiper {
+        --swiper-navigation-size: 14px;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .work-slider {
         padding: 0;
+    }
+
+    swiper {
+        --swiper-navigation-size: 12px;
     }
 
     .swiper-slide {
