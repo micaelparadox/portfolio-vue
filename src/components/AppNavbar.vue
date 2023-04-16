@@ -3,20 +3,26 @@
         <nav class="flex-1 flex items-center justify-center py-4">
             <ul v-if="!isMobileMenuOpen" class="nav-links hidden lg:flex items-center justify-center space-x-8">
                 <li>
-                    <a class="nav-link" :class="{ 'text-white font': $route.path === '/' }"
-                        @click="scrollTo('inicio')">Início</a>
+                    <a class="nav-link" :class="{ 'text-white font': $route.path === '/' }" @click="scrollTo('inicio')">
+                        <home class="inline mr-2" />Início
+                    </a>
                 </li>
                 <li>
                     <a class="nav-link" :class="{ 'text-white font': $route.path === '/experience' }"
-                        @click="scrollTo('experience')">Experiências</a>
+                        @click="scrollTo('experience')">
+                        <compass class="inline mr-2" />Experiências
+                    </a>
                 </li>
                 <li>
-                    <a class="nav-link" :class="{ 'text-white font': $route.path === '/about' }"
-                        @click="scrollTo('about')">Sobre</a>
+                    <a class="nav-link" :class="{ 'text-white font': $route.path === '/about' }" @click="scrollTo('about')">
+                        <info class="inline mr-2" />Sobre
+                    </a>
                 </li>
                 <li>
                     <a class="nav-link" :class="{ 'text-white font': $route.path === '/contact' }"
-                        @click="scrollTo('contact')">Contato</a>
+                        @click="scrollTo('contact')">
+                        <mail class="inline mr-2" />Contato
+                    </a>
                 </li>
             </ul>
             <button class="block lg:hidden" @click="toggleMobileMenu">
@@ -26,33 +32,47 @@
         <transition name="slide-fade">
             <ul v-if="isMobileMenuOpen" class="nav-links-mobile absolute top-0 right-0 w-full mt-16 bg-gray-800 text-white">
                 <li @click="toggleMobileMenu">
-                    <a class="nav-link" :class="{ 'text-white font': $route.path === '/' }"
-                        @click="scrollTo('inicio')">Início</a>
+                    <a class="nav-link" :class="{ 'text-white font': $route.path === '/' }" @click="scrollTo('inicio')">
+                        <home class="inline mr-2" />Início
+                    </a>
                 </li>
                 <li @click="toggleMobileMenu">
                     <a class="nav-link" :class="{ 'text-white font': $route.path === '/experience' }"
-                        @click="scrollTo('experience')">Experiências</a>
+                        @click="scrollTo('experience')">
+                        <compass class="inline mr-2" />Experiências
+                    </a>
                 </li>
                 <li @click="toggleMobileMenu">
-                    <a class="nav-link" :class="{ 'text-white font': $route.path === '/about' }"
-                        @click="scrollTo('about')">Sobre</a>
+                    <a class="nav-link" :class="{ 'text-white font': $route.path === '/about' }" @click="scrollTo('about')">
+                        <info class="inline mr-2" />Sobre
+                    </a>
                 </li>
                 <li @click="toggleMobileMenu">
                     <a class="nav-link" :class="{ 'text-white font': $route.path === '/contact' }"
-                        @click="scrollTo('contact')">Contato</a>
+                        @click="scrollTo('contact')">
+                        <mail class="inline mr-2" />Contato
+                    </a>
                 </li>
             </ul>
         </transition>
+
+
     </header>
 </template>
-
-  
 <script>
 import { defineComponent } from 'vue';
 import VueScrollTo from 'vue-scrollto';
+import { Home, Compass, Info, Mail } from 'lucide-vue-next';
+
 
 export default defineComponent({
     name: 'AppNavbar',
+    components: {
+        Home,
+        Compass,
+        Info,
+        Mail,
+    },
     data() {
         return {
             isMobileMenuOpen: false,
@@ -106,24 +126,26 @@ export default defineComponent({
 .nav-link::after {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.1);
+    top: -10px;
+    left: -10px;
+    width: calc(100% + 20px);
+    height: calc(100% + 20px);
+    background-color: rgba(255, 255, 255, 0.05);
     transform: scale(0);
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     z-index: -1;
     border-radius: 5px;
 }
 
 .nav-link:hover::after {
     transform: scale(1);
+    box-shadow: 0 6px 10px -1px rgba(0, 0, 0, 0.3), 0 4px 6px -1px rgba(0, 0, 0, 0.15);
 }
 
 .nav-link:hover {
     color: #ffffff;
 }
+
 
 .nav-links-mobile {
     list-style-type: none;
