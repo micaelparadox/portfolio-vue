@@ -77,7 +77,6 @@ export default {
     padding: 1rem;
 }
 
-/* Adicione esta classe para corrigir a cor do título */
 .work-title {
     color: #2C2C2C;
 }
@@ -94,7 +93,8 @@ export default {
     align-items: center;
     justify-items: center;
     text-align: center;
-    padding: 1rem;
+    padding: 1.5rem;
+    /* Aumente o padding */
     border-radius: 10px;
 }
 
@@ -112,14 +112,20 @@ export default {
 
 /* Estilos para os novos trabalhos */
 .work-slider h4 {
-    font-size: 1.2rem;
+    font-size: 1rem;
+    /* Reduza o tamanho da fonte */
     margin-top: 1rem;
+    font-weight: 600;
+    /* Aumente o peso da fonte */
+    line-height: 1.2;
+    /* Ajuste o espaçamento entre linhas */
 }
 
 .work-slider p {
     font-size: 0.8rem;
     margin-top: 0.4rem;
-    line-height: 1.2;
+    line-height: 1.4;
+    /* Ajuste o espaçamento entre linhas */
 }
 
 .work-slider .swiper-slide:nth-child(odd) {
@@ -157,14 +163,14 @@ export default {
     }
 
     .work-slider h4 {
-        font-size: 1rem;
+        font-size: 0.9rem;
         margin-top: 0.5rem;
     }
 
     .work-slider p {
         font-size: 0.7rem;
         margin-top: 0.3rem;
-        line-height: 1.2;
+        line-height: 1.4;
     }
-}
-</style>
+}</style>
+
