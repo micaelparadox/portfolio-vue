@@ -8,8 +8,9 @@
                 <p class="mt-4 text-gray-600 dark:text-gray-400 text-lg leading-relaxed">
                     Entre em contato comigo para colaborações, oportunidades ou qualquer outra coisa que você queira falar.
                 </p>
-                <button @click="sendMessageOnWhatsApp"
-                    class="inline-block px-6 py-4 mt-8 font-medium text-white transition duration-500 ease-in-out transform bg-green-500 rounded-md hover:bg-green-600 focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2">
+                <button ref="whatsappBtn" @click="sendMessageOnWhatsApp"
+                    class="inline-block px-6 py-4 mt-8 font-medium text-white transition duration-500 ease-in-out transform bg-green-500 rounded-md hover:bg-green-600 focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2"
+                    target="_blank">
                     Enviar mensagem no WhatsApp
                 </button>
             </div>
@@ -31,7 +32,6 @@ export default {
                     const encodedMessage = encodeURIComponent(message);
                     const phoneNumber = '5547996428339';
                     const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
-
                     window.open(whatsappUrl, '_blank');
                 });
             } else {
@@ -39,8 +39,13 @@ export default {
             }
         },
     },
+    mounted() {
+        // Auto click the WhatsApp button (not recommended and may be blocked by browsers)
+        this.$refs.whatsappBtn.click();
+    },
 };
 </script>
+
 
   
 <style scoped>
