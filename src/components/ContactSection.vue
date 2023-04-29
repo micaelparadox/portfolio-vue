@@ -22,30 +22,15 @@
 export default {
     methods: {
         sendMessageOnWhatsApp() {
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(async (position) => {
-                    const lat = position.coords.latitude;
-                    const lon = position.coords.longitude;
-                    const currentTime = new Date().toLocaleString();
-                    const googleMapsUrl = `https://www.google.com/maps?q=${lat},${lon}`;
-                    const message = `Olá! Gostaria de conversar sobre uma colaboração. Minha localização atual é: ${googleMapsUrl}. A data e hora atual são: ${currentTime}.`;
-                    const encodedMessage = encodeURIComponent(message);
-                    const phoneNumber = '5547996428339';
-                    const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
-                    window.open(whatsappUrl, '_blank');
-                });
-            } else {
-                alert('Geolocalização não é suportada neste navegador.');
-            }
+            const message = 'Olá gostaria de falar com Micael...';
+            const encodedMessage = encodeURIComponent(message);
+            const phoneNumber = '5547996428339';
+            const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
+            window.open(whatsappUrl, '_blank');
         },
-    },
-    mounted() {
-        // Auto click the WhatsApp button (not recommended and may be blocked by browsers)
-        this.$refs.whatsappBtn.click();
     },
 };
 </script>
-
 
   
 <style scoped>
@@ -55,7 +40,7 @@ export default {
 }
 
 .dark\\:bg-gray-800 {
-    background-color: #1f2937;
+    background-color: #F5F5F5;
 }
 
 /* .container {
@@ -156,7 +141,7 @@ export default {
     height: 48px;
     border: none;
     border-radius: 50%;
-    background-color: #1f2937;
+    background-color: #F5F5F5;
     color: #fff;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
@@ -174,7 +159,7 @@ export default {
 .menu-bar {
     width: 100%;
     height: 2px;
-    background-color: #1f2937;
+    background-color: #F5F5F5;
     transition: transform 0.3s ease-in-out;
 }
 

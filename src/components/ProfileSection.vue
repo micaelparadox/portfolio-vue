@@ -33,7 +33,7 @@ export default {
 <style scoped>
 /* Aumentando a margem superior na classe .profile-container */
 .profile-container {
-    background-color: #1F2937;
+    background-color: #1F2937; /* Não modificar */
     padding-top: 80px;
 }
 
