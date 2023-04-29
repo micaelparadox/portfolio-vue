@@ -23,7 +23,7 @@ export default {
     methods: {
         sendMessageOnWhatsApp() {
             const message = 'Olá gostaria de falar com Micael...';
-            const encodedMessage = encodeURIComponent(message);
+            const encodedMessage = encodeURIComponent(message); //
             const phoneNumber = '5547996428339';
             const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
             window.open(whatsappUrl, '_blank');
